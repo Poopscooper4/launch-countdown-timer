@@ -1,0 +1,116 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    height: 100vh;
+    background: #1e1e29;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+}
+
+.topside{
+    padding-top: 150px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.topside h1{
+    line-height: 29.11px;
+    color: white;
+    font-family: "Red Hat Text", sans-serif; 
+    font-weight: 700;
+    font-optical-sizing: auto;
+    font-style: normal;
+    letter-spacing: 7.5px;
+    font-size: 24px;
+}
+.midside{
+    gap: 20px;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 100px;
+    width: 100%;
+}
+.clock{
+    padding-top: 150px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    gap: 40px;
+}
+.hr{
+    padding-left: 20px;
+}
+.sec{
+    padding-right: 40px;
+}
+.Nstyle{
+    font-family: "Red Hat Text", sans-serif; 
+    font-weight: 700;
+    letter-spacing: -2.4px;
+    font-size: 80px;
+    color: #FB5E84;
+}
+.names{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 50px;
+    gap: 95px;
+    font-family: "Red Hat Text", sans-serif; 
+    font-weight: 700;
+    letter-spacing: 5.92px;
+    font-size: 14px;
+    color: #8385A9;
+}
+.samestyle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: #101012 1px  10px 10px;
+    width: 148px;
+    height: 150px; 
+    border-radius: 8px;
+    background: #343650;
+
+}
+.botside img{
+    width: 100%;
+    padding-top: 100px;
+    /* height: 266px; */
+}
+.botside{
+    position: relative;
+    flex-direction: column;
+    /* height: 266px; */
+    display: flex;
+    /* align-items: end; */
+    /* justify-content: center; */
+    width: 100%;
+    display: flex;
+    /* gap: 30px; */
+}
+.icondiv{
+    position: absolute;
+    display: flex;
+    bottom: 30%;
+    left: 46%;
+    gap: 40px;
+}
+.fa-brands{
+    font-size: 30px;
+    color: #8385A9;
+}
+.fa-brands:hover{
+    color: #FB5E84;
+    transition: 1s;
+}
