@@ -114,3 +114,51 @@ body{
     color: #FB5E84;
     transition: 1s;
 }
+.img2{
+    display: none;
+}
+
+
+@media screen and (max-width: 375px){
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    .samestyle{
+        width: 70px;     
+        height: 70px;
+    }
+    .names{
+        margin: 0;
+        padding: 0;
+        gap: 0;
+    }
+    .Nstyle{
+        font-size: 36px;
+    }
+    .topside{
+        text-align: center;
+        display: flex;
+        
+        margin: 0;
+    }
+    .clock{
+        gap: 20px;
+    }
+    .names{
+        margin-left: 65px;
+        font-size: 7px;
+        gap: 20px;
+    }
+    .img1{
+        display: none;
+    }
+    .icondiv{
+        bottom: 30%;
+        left: 32%;
+
+    }
+    .img2{
+        display: unset;
+    }
+}

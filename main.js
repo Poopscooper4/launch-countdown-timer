@@ -7,56 +7,78 @@ let minnum = document.getElementById("minnum")
 let secnum = document.getElementById("secnum")
 
 
+let spanday = document.getElementById("spanday")
 
-let days = prompt("Enter day")
-let hour = prompt("Enter hours")
-let min = prompt("Enter minutes")
-let sec = prompt("Enter seconds")
+let spanhour = document.getElementById("spanhour")
 
-// console.log(days , hour , min ,sec);
+let spanmin = document.getElementById("spanmin")
 
-if (days === "" || hour === "" || min === "" || sec === "") {
-    alert("Error try again")
-}else if(days === Number || hour === Number || min === Number || sec === Number){
-    alert("you have to type numbers");
+let spansec = document.getElementById("spansec")
+
+
+
+let days;
+let hour; 
+let min; 
+let sec; 
+
+function againpromt() {
+    do {
+        sec = prompt("Enter seconds")
+    } while (isNaN(Number(sec)));
+
+    do {
+        min = prompt("Enter minutes")
+    } while (isNaN(Number(min)));
+
+    do {
+        hour = prompt("Enter hours")
+    } while (isNaN(Number(hour)));
+
+    do {
+        days = prompt("Enter day")
+    } while (isNaN(Number(days)));
+
+    return sec , min , hour , days;
+
+    console.log(sec);
 }
 
+againpromt()
 
-function timernumbers(time) {
-    let spanday = document.createElement("span")
-    spanday.innerText = days
-    spanday.className = "Nstyle"
-    daynum.appendChild(spanday)
 
-    let spanhour = document.createElement("span")
-    spanhour.innerText = hour
-    spanhour.className = "Nstyle"
-    hournum.appendChild(spanhour)
+let countdown =  setInterval(() => {
 
-    let spanmin = document.createElement("span")
-    spanmin.innerText = min
-    spanmin.className = "Nstyle"
-    minnum.appendChild(spanmin)
-
-    let spansec = document.createElement("span")
     spansec.innerText = sec
-    spansec.className = "Nstyle"
-    secnum.appendChild(spansec)
-}
 
-timernumbers()
+    spanmin.innerText = min
 
+    spanhour.innerText = hour
 
-function timer(time) {
-    setTimeout
-}
+    spanday.innerText = days
 
-// do {
-//     let days = prompt("Enter day")
-//     let hour = prompt("Enter hours")
-//     let min = prompt("Enter minutes")
-//     let sec = prompt("Enter seconds")
-// } while (days === "" || hour === "" || min === "" || sec === "");
+    if(sec <= 0 && (min > 0 || hour > 0 || days > 0)){
+        sec = "60"
+        min--
+    }else if (min <= 0 && (hour > 0 || days > 0))  {
+        min = "60"
+        hour--
+    }else if (hour < 0 && days > 0) {
+        hour = 23
+        days--
+    }
+    
+    sec--
+
+    if (days <= 0 && (hour <= 0 && sec <= "0" && min <= 0)) {
+        clearInterval(countdown)
+        alert("countdown is finished")
+        
+        }
+
+}, 1000);
+setInterval()
+
 
 
 
